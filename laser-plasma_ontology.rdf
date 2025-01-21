@@ -262,6 +262,7 @@
     <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Creator -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Creator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Metadata_property"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Owner"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The information about the creator of this laser plasma ontology.</rdfs:comment>
@@ -295,7 +296,9 @@ Currently: Masoud Afshari</rdfs:comment>
 
     <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Facility_properties -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Facility_properties"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Facility_properties">
+        <rdfs:comment>A Facility can provide experimental (laser, ring or linear accelerator) or computational equipments (supercomputer, data storage) etc.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -374,6 +377,23 @@ Currently: Masoud Afshari</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#laser_Laguerre-Gaussian_mode_(LG)"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Laser"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Metadata_property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Metadata_property">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment>Metadata: Provides information about the data and can be:
+
+Descriptive Metadata: Provides information about the data itself (e.g., title, author, creation date, format).
+
+Structural Metadata: Describes the organization and structure of the data (e.g., data types, units, relationships).
+
+Administrative Metadata: Includes information about data access, ownership, and permissions.
+
+Provenance Metadata: Tracks the origin and history of the data (e.g., processing steps, software used).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2210,9 +2230,20 @@ true: If the option is set to &quot;true&quot;, the exported PNG images will hav
     
 
 
-    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_data_end -->
+    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_data_end">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>the date a project has been performed</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date_end -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date_end">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -2221,24 +2252,13 @@ true: If the option is set to &quot;true&quot;, the exported PNG images will hav
     
 
 
-    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_data_start -->
+    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date_start -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_data_start">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date_start">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment>the date a project has been started</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_date">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_property"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Project"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment>the date a project has been performed</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2268,7 +2288,8 @@ true: If the option is set to &quot;true&quot;, the exported PNG images will hav
     <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_property -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#project_property">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Project"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#Metadata_property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#MetaData"/>
         <rdfs:comment>the properties of a project (either simulation or experiment)</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -4090,6 +4111,12 @@ By analyzing this fringe shift, information about the plasma&apos;s electron den
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#High_Energy_Density_Physics_(HEDP)"/>
         <rdfs:comment>Understanding the behavior of materials under extreme pressures relevant to planetary science and astrophysics.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#MetaData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/afshar87/ontologies/2024/3/Laser-Plasma_ontology#MetaData"/>
     
 
 
